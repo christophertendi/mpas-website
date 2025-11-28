@@ -27,7 +27,7 @@ const Navigation = () => {
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="nav-content container">
         <Link to="/" className="logo">
-          <img src="logo mpas.png" alt="PT MPAS Logo" className="logo-image" /> 
+          <img src="logo mpas 2.png" alt="PT MPAS Logo" className="logo-image" /> 
         </Link>
 
         <button 
