@@ -232,27 +232,27 @@ const About = () => {
           </div>
           <div className="cert-grid">
             <div className="cert-card" onClick={() => openModal('/9001.jpg', 'ISO 9001')}>
-              <img src="/9001.jpg" alt="ISO 9001" className="cert-img" />
+              <img src="/images/products/9001.jpg" alt="ISO 9001" className="cert-img" />
               <div className="cert-title">ISO 9001</div>
               <p>Quality Management Systems</p>
             </div>
             <div className="cert-card" onClick={() => openModal('/14001.jpg', 'ISO 14001')}>
-              <img src="/14001.jpg" alt="ISO 14001" className="cert-img" />
+              <img src="/images/products/14001.jpg" alt="ISO 14001" className="cert-img" />
               <div className="cert-title">ISO 14001</div>
               <p>Environmental Management</p>
             </div>
             <div className="cert-card" onClick={() => openModal('/45001.jpg', 'ISO 45001')}>
-              <img src="/45001.jpg" alt="ISO 45001" className="cert-img" />
+              <img src="/images/products/45001.jpg" alt="ISO 45001" className="cert-img" />
               <div className="cert-title">ISO 45001</div>
               <p>Occupational Health & Safety</p>
             </div>
             <div className="cert-card" onClick={() => openModal('/spda.jpg', 'SPDA MPAS')}>
-              <img src="/spda.jpg" alt="SPDA MPAS" className="cert-img" />
+              <img src="/images/products/spda.jpg" alt="SPDA MPAS" className="cert-img" />
               <div className="cert-title">SPDA MPAS</div>
               <p>Sertifikat Pengganti Dokumen Administrasi</p>
             </div>
             <div className="cert-card" onClick={() => openModal('/chesms.jpg', 'e-CHESMS')}>
-              <img src="/chesms.jpg" alt="e-CHESMS" className="cert-img" />
+              <img src="/images/products/chesms.jpg" alt="e-CHESMS" className="cert-img" />
               <div className="cert-title">e-CHESMS</div>
               <p>SERTIFIKAT e-CHSEMS PT Pertamina Hulu Rokan</p>
             </div>

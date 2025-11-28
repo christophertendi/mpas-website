@@ -39,7 +39,7 @@ const Services = () => {
             {/* Mobile Well Test */}
             <div className="service-detail-card">
               <div className="service-image">
-                <img src="mobile well test 1.png" alt="Mobile Well Test Unit" />
+                <img src="images/products/mobile well test 1.png" alt="Mobile Well Test Unit" />
               </div>
               <div className="service-text">
                 <div className="service-number">01</div>
@@ -78,7 +78,7 @@ const Services = () => {
             {/* Sonolog Services */}
             <div className="service-detail-card">
               <div className="service-image">
-                <img src="sonolog 2.png" alt="Sonolog Equipment" />
+                <img src="images/products/sonolog 2.png" alt="Sonolog Equipment" />
               </div>
               <div className="service-text">
                 <div className="service-number">02</div>
@@ -115,7 +115,7 @@ const Services = () => {
             {/* Operation & Maintenance */}
             <div className="service-detail-card">
               <div className="service-image">
-                <img src="ops 4.png" alt="Operation & Maintenance" />
+                <img src="images/products/ops 4.png" alt="Operation & Maintenance" />
               </div>
               <div className="service-text">
                 <div className="service-number">03</div>
@@ -152,7 +152,7 @@ const Services = () => {
             {/* Offshore MPFM & GLCC */}
             <div className="service-detail-card">
               <div className="service-image">
-                <img src="offshore 6.png" alt="Offshore MPFM & GLCC" />
+                <img src="images/products/offshore 6.png" alt="Offshore MPFM & GLCC" />
               </div>
               <div className="service-text">
                 <div className="service-number">04</div>
@@ -190,7 +190,7 @@ const Services = () => {
             {/* Early Production Facility */}
             <div className="service-detail-card">
               <div className="service-image">
-                <img src="early 1.png" alt="Early Production Facility" />
+                <img src="images/products/early 1.png" alt="Early Production Facility" />
               </div>
               <div className="service-text">
                 <div className="service-number">05</div>
@@ -226,7 +226,7 @@ const Services = () => {
             {/* SCADA & Data Management */}
             <div className="service-detail-card">
               <div className="service-image">
-                <img src="scada.jpeg" alt="SCADA System" />
+                <img src="images/products/scada.jpeg" alt="SCADA System" />
               </div>
               <div className="service-text">
                 <div className="service-number">06</div>
@@ -264,7 +264,7 @@ const Services = () => {
             {/* Steel Fabrication & EPCC */}
             <div className="service-detail-card">
               <div className="service-image">
-                <img src="steel 3.jpeg" alt="Steel Fabrication" />
+                <img src="images/products/steel 3.jpeg" alt="Steel Fabrication" />
               </div>
               <div className="service-text">
                 <div className="service-number">07</div>
@@ -301,7 +301,7 @@ const Services = () => {
             {/* Calibration & Certification */}
             <div className="service-detail-card">
               <div className="service-image">
-                <img src="calibration and certification.png" alt="Calibration Services" />
+                <img src="images/products/calibration and certification.png" alt="Calibration Services" />
               </div>
               <div className="service-text">
                 <div className="service-number">08</div>
