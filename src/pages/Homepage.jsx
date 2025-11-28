@@ -64,10 +64,10 @@ const Homepage = () => {
                 Established in 1999, PT. MPAS is committed to providing the best solutions in production 
                 well testing, flow measurement, and operation and maintenance services for oil and gas 
                 facilities. MPAS has become a trusted partner to various national upstream oil and gas 
-                companies, with a proven track record of over 120,000 well tests conducted annually.
+                companies, with a proven track record of over 10,000 well tests conducted annually.
               </p>
               <ul className="overview-highlights">
-                <li>Over 120,000 well tests conducted annually</li>
+                <li>Over 10,000 well tests conducted annually</li>
                 <li>Comprehensive Mobile Well Test and MPFM solutions</li>
                 <li>ISO 9001, 14001, and 45001 certified</li>
                 <li>Authorized Accuflow multiphase metering distributor</li>
