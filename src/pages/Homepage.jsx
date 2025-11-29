@@ -109,7 +109,7 @@ const Homepage = () => {
             </div>
             <div className="service-card">
               <div className="service-icon">🏗️</div>
-              <h4>Installation & Maintenance</h4>
+              <h4>Operation & Maintenance</h4>
               <p className="service-description">
                 Professional installation and ongoing maintenance services to ensure optimal system 
                 performance and longevity.
