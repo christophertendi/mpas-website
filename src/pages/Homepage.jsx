@@ -3,6 +3,14 @@ import { Link } from 'react-router-dom';
 import './Homepage.css';
 
 const Homepage = () => {
+  const handleCardClick = (e) => {
+    // For mobile: toggle flip on tap
+    if (window.innerWidth <= 640) {
+      const card = e.currentTarget;
+      card.classList.toggle('active');
+    }
+  };
+
   return (
     <div className="homepage">
       {/* Hero Section */}
@@ -31,12 +39,12 @@ const Homepage = () => {
           <div className="trust-grid">
             <div className="trust-item">
               <div className="trust-icon">🏆</div>
-              <div className="trust-number">ISO9001/14001/45001</div>
+              <div className="trust-number">ISO 9001</div>
               <div className="trust-text">Certified Quality</div>
             </div>
             <div className="trust-item">
               <div className="trust-icon">📈</div>
-              <div className="trust-number">100+</div>
+              <div className="trust-number">500+</div>
               <div className="trust-text">Projects Completed</div>
             </div>
             <div className="trust-item">
@@ -46,7 +54,7 @@ const Homepage = () => {
             </div>
             <div className="trust-item">
               <div className="trust-icon">⭐</div>
-              <div className="trust-number">15+</div>
+              <div className="trust-number">100+</div>
               <div className="trust-text">Satisfied Clients</div>
             </div>
           </div>
@@ -109,7 +117,7 @@ const Homepage = () => {
             </div>
             <div className="service-card">
               <div className="service-icon">🏗️</div>
-              <h4>Operation & Maintenance</h4>
+              <h4>Installation & Maintenance</h4>
               <p className="service-description">
                 Professional installation and ongoing maintenance services to ensure optimal system 
                 performance and longevity.
@@ -171,15 +179,122 @@ const Homepage = () => {
               <div className="product-preview-image">
                 <img 
                   src="/images/products/2phase-jr-1.png" 
-                  alt="Accuflow 2-Phase JR Series"
+                  alt="Mobile Testing Units"
                   className="product-preview-img"
                 />
-                <div className="product-badge">Small Footprint</div>
+                <div className="product-badge">Mobile Solutions</div>
               </div>
               <div className="product-preview-info">
-                <h4>Accuflow 2-Phase JR Series</h4>
-                <p>Most compact 2-phase system with self-regulated liquid level</p>
+                <h4>Mobile Testing Units</h4>
+                <p>Truck and trailer-mounted systems for field operations</p>
                 <Link to="/products" className="btn btn-primary btn-sm">View Products</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Client Showcase */}
+      <section className="section section-gray">
+        <div className="container">
+          <div className="section-header">
+            <h2>Trusted by Industry Leaders</h2>
+            <p className="section-subtitle">Partnering with major oil & gas companies across Indonesia and beyond</p>
+          </div>
+          <div className="client-grid">
+            {/* PT Pertamina Hulu Rokan */}
+            <div className="flip-card" onClick={handleCardClick}>
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="client-logo-placeholder">
+                    <img src="/images/pertaminahulurokan.png" alt="PT Pertamina Hulu Rokan" className="client-logo" />
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <h4>PT Pertamina Hulu Rokan</h4>
+                  <p>Long-term partnership providing Mobile Well Test services in Sumatra Light North and South operations since 2021.</p>
+                  <div className="client-tag">Major Client</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Chevron Pacific Indonesia */}
+            <div className="flip-card" onClick={handleCardClick}>
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="client-logo-placeholder">
+                    <img src="/images/chevron.png" alt="Chevron Pacific Indonesia" className="client-logo" />
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <h4>Chevron Pacific Indonesia</h4>
+                  <p>Provided Mobile Well Test and Sonolog services for Sumatra Light operations from 2011-2021.</p>
+                  <div className="client-tag">Historical Partner</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Medco E&P */}
+            <div className="flip-card" onClick={handleCardClick}>
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="client-logo-placeholder">
+                    <img src="images/medco.png" alt="Medco E&P Natuna" className="client-logo" />
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <h4>Medco E&P Natuna</h4>
+                  <p>Offshore MPFM and GLCC installations including Malong, Forel, Bronang, West Belut, and Terubuk projects (2021-2024).</p>
+                  <div className="client-tag">Offshore Projects</div>
+                </div>
+              </div>
+            </div>
+
+            {/* PT Pertamina EP */}
+            <div className="flip-card" onClick={handleCardClick}>
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="client-logo-placeholder">
+                    <img src="images/pertaminaep.png" alt="PT Pertamina EP" className="client-logo" />
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <h4>PT Pertamina EP</h4>
+                  <p>Long-standing partnership providing Mobile Well Test services for Zona 7 Field operations since 2009, continuing through 2025.</p>
+                  <div className="client-tag">16+ Years</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Star Energy Geothermal */}
+            <div className="flip-card" onClick={handleCardClick}>
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="client-logo-placeholder">
+                    <img src="/images/star.png" alt="Star Energy Geothermal" className="client-logo" />
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <h4>Star Energy Geothermal</h4>
+                  <p>Trusted partner for geothermal energy operations, providing specialized well testing and measurement solutions.</p>
+                  <div className="client-tag">Geothermal</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Supreme Energy */}
+            <div className="flip-card" onClick={handleCardClick}>
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="client-logo-placeholder">
+                    <img src="/images/supreme.png" alt="Supreme Energy" className="client-logo" />
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <h4>Supreme Energy</h4>
+                  <p>Provided Sonolog services and fluid level measurement for geothermal energy production operations.</p>
+                  <div className="client-tag">Energy Sector</div>
+                </div>
               </div>
             </div>
           </div>
