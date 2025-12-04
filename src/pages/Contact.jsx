@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import './Contact.css';
 
 const Contact = () => {
+  // Environment variables
+  const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'salesmpas@ptmpas.com';
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '6281380365608';
+  const phoneJakarta = import.meta.env.VITE_PHONE_JAKARTA || '0214529256';
+  const phoneCikarang = import.meta.env.VITE_PHONE_CIKARANG || '02189118310';
+  
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -38,7 +44,7 @@ Project Details:
 ${formData.message}
     `.trim();
 
-    const mailtoLink = `mailto:mpasjkt@ptmpas.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     // Open mailto link
     window.location.href = mailtoLink;
@@ -84,7 +90,7 @@ ${formData.message}
                   <span>✓</span>
                   <div>
                     <strong>Form submitted!</strong><br />
-                    Your email client should open. If not, please email us directly at mpasjkt@ptmpas.com
+                    Your email client should open. If not, please email us directly at {contactEmail}
                   </div>
                 </div>
               )}
@@ -204,14 +210,14 @@ ${formData.message}
                   <h4>Prefer instant messaging?</h4>
                   <div className="alt-buttons">
                     <a
-                      href="https://wa.me/6281380365608"  
+                      href={`https://wa.me/${whatsappNumber}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-whatsapp-alt"
                     >
                       💬 WhatsApp Us
                     </a>
-                    <a href="salesmpas@ptmpas.com" className="btn-email">
+                    <a href={`mailto:${contactEmail}`} className="btn-email">
                       ✉️ Send Email
                     </a>
                   </div>
@@ -231,7 +237,7 @@ ${formData.message}
                     Kokan Permata Kelapa Gading Block D/27<br />
                     Jl. Boulevard Bukit Gading Raya<br />
                     Kelapa Gading, Jakarta 14240<br />
-                    <a href="tel:0214529256">Tel: 0214529256</a><br />
+                    <a href={`tel:${phoneJakarta}`}>Tel: {phoneJakarta}</a><br />
                   </div>
                 </div>
 
@@ -242,7 +248,7 @@ ${formData.message}
                     Block AE-20/21, Km.37 Tol Cikampek<br />
                     Cikarang Pusat, Bekasi<br />
                     Jawa Barat 17550<br />
-                    <a href="tel:02189118310">Tel: 02189118310</a>
+                    <a href={`tel:${phoneCikarang}`}>Tel: {phoneCikarang}</a>
                   </div>
                 </div>
 
@@ -262,8 +268,7 @@ ${formData.message}
                   Email
                 </h3>
                 <div className="office-details">
-                  <a href="mailto:salesmpas@ptmpas.com">salesmpas@ptmpas.com</a><br />
-                  {/* <a href="mailto:mpas.jkt@gmail.com">mpas.jkt@gmail.com</a> */}
+                  <a href={`mailto:${contactEmail}`}>{contactEmail}</a><br />
                 </div>
               </div>
 
