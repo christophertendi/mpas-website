@@ -6,25 +6,59 @@
 
 /* Page Hero */
 .page-hero {
-  height: 40vh;
-  background: linear-gradient(rgba(26, 35, 50, 0.8), rgba(26, 35, 50, 0.6)),
-              url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%232D3748" width="1200" height="400"/><circle cx="300" cy="200" r="100" fill="%233D4758" opacity="0.3"/><circle cx="900" cy="150" r="120" fill="%233D4758" opacity="0.2"/></svg>') center/cover;
+  min-height: 50vh;
+  background: linear-gradient(rgba(26, 35, 50, 0.75), rgba(26, 35, 50, 0.75)),
+              url('/images/products/steel 1.jpeg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(26, 35, 50, 0.8) 0%, rgba(235, 125, 52, 0.3) 100%);
+  z-index: 0;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .page-hero h1 {
   font-size: 48px;
   margin-bottom: var(--spacing-sm);
   color: white;
+  animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: both;
 }
 
 .page-hero p {
   font-size: 18px;
   color: rgba(255, 255, 255, 0.9);
+  animation: fadeInUp 0.8s ease-out 0.2s;
+  animation-fill-mode: both;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .breadcrumb {
@@ -325,6 +359,18 @@
 
 /* Responsive */
 @media (max-width: 968px) {
+  .page-hero {
+    min-height: 45vh;
+  }
+
+  .page-hero h1 {
+    font-size: 38px;
+  }
+
+  .page-hero p {
+    font-size: 16px;
+  }
+
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -336,8 +382,16 @@
 }
 
 @media (max-width: 640px) {
+  .page-hero {
+    min-height: 40vh;
+  }
+
   .page-hero h1 {
     font-size: 32px;
+  }
+
+  .page-hero p {
+    font-size: 15px;
   }
 
   .products-grid {

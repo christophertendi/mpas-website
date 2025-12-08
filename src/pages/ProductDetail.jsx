@@ -39,7 +39,8 @@ const ProductDetail = () => {
                   />
                 ) : (
                   <div className="product-image-placeholder">
-                    {product.category === '2-Phase Systems' ? '⚙️' : '🔧'}
+                    {product.category === '2-Phase Systems' ? '⚙️' : 
+                     product.category === 'Mobile Solutions' ? '🚛' : '🔧'}
                   </div>
                 )}
               </div>
@@ -60,7 +61,8 @@ const ProductDetail = () => {
                 {product.images && [...Array(Math.max(0, 4 - product.images.length))].map((_, i) => (
                   <div key={`placeholder-${i}`} className="thumbnail">
                     <div className="thumbnail-placeholder">
-                      {product.category === '2-Phase Systems' ? '⚙️' : '🔧'}
+                      {product.category === '2-Phase Systems' ? '⚙️' : 
+                       product.category === 'Mobile Solutions' ? '🚛' : '🔧'}
                     </div>
                   </div>
                 ))}
@@ -102,6 +104,42 @@ const ProductDetail = () => {
                 </ul>
               </div>
 
+              {/* Applications - Mobile Well Test specific */}
+              {product.applications && (
+                <div className="detail-section">
+                  <h3>Applications</h3>
+                  <ul className="features-list">
+                    {product.applications.map((app, idx) => (
+                      <li key={idx}>{app}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Major Clients - Mobile Well Test specific */}
+              {product.clients && (
+                <div className="detail-section">
+                  <h3>Major Clients</h3>
+                  <ul className="features-list">
+                    {product.clients.map((client, idx) => (
+                      <li key={idx}>{client}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Services Included - Mobile Well Test specific */}
+              {product.services && (
+                <div className="detail-section">
+                  <h3>Services Included</h3>
+                  <ul className="features-list">
+                    {product.services.map((service, idx) => (
+                      <li key={idx}>{service}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
               {/* Specifications Table */}
               <div className="detail-section">
                 <h3>Technical Specifications</h3>
@@ -121,9 +159,6 @@ const ProductDetail = () => {
               <div className="download-section">
                 <h4>Download Documents</h4>
                 <div className="download-links">
-                  {/* <a href="#" className="download-link">
-                    📄 Technical Data Sheet (PDF)
-                  </a> */}
                   <a 
                     href="/accuflow brochure new_250610_145406.pdf" 
                     className="download-link"
@@ -131,11 +166,19 @@ const ProductDetail = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    📄 Accuflow Brochure  (PDF)
+                    📄 Accuflow Brochure (PDF)
                   </a>
-                  {/* <a href="#" className="download-link">
-                    📄 Installation Guide (PDF)
-                  </a> */}
+                  {product.id === 5 && (
+                    <a 
+                      href="/Compro_MPAS_2025_-_EN.pdf" 
+                      className="download-link"
+                      download="MPAS_Company_Profile_2025.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      📄 MPAS Company Profile (PDF)
+                    </a>
+                  )}
                 </div>
               </div>
 
@@ -174,7 +217,8 @@ const ProductDetail = () => {
                           alt={relatedProduct.name}
                         />
                       ) : (
-                        <>{relatedProduct.category === '2-Phase Systems' ? '⚙️' : '🔧'}</>
+                        <>{relatedProduct.category === '2-Phase Systems' ? '⚙️' : 
+                           relatedProduct.category === 'Mobile Solutions' ? '🚛' : '🔧'}</>
                       )}
                     </div>
                     <div className="related-info">

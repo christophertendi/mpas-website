@@ -29,27 +29,46 @@ const About = () => {
       <section className="section">
         <div className="container">
           <div className="about-intro">
-            <div className="about-content">
-              <h2>Leading Provider of Well Test Measurement Solutions</h2>
-              <p>
-                Established in 1999, initially operating in the fields of trading, steel fabrication, 
-                and mechanical, electrical, and instrumentation system integration, PT. Mitra Prana 
-                Abadi Sentosa (MPAS) is a company engaged in oil & gas energy services in Indonesia, 
-                particularly in oil & gas well production measurement (production well testing).
-              </p>
-              <p>
-                PT. MPAS is committed to providing the best solutions in production well testing, 
-                flow measurement, and operation and maintenance services for oil and gas facilities. 
-                MPAS has become a trusted partner to various national upstream oil and gas companies, 
-                with a proven track record of over 10,000 well tests conducted annually.
-              </p>
-              <p>
-                We focus on technology and innovations and workplace safety as the main pillars of 
-                every service we provide. Supported by an experienced team and an integrated work 
-                system, MPAS is capable of designing, operating, and developing Mobile Well Test 
-                units and multiphase flow metering systems for various field conditions, both onshore 
-                and offshore.
-              </p>
+            <div className="about-overview-grid">
+              <div className="about-content">
+                <h2>Leading Provider of Well Test Measurement Solutions</h2>
+                <p>
+                  PT Mitra Prana Abadi Sentosa (MPAS) is Indonesia's leading provider of multiphase flow measurement solutions and mobile well test services for the oil and gas industry. Since 1999, we have specialized in delivering precision-engineered Accuflow systems that measure oil, water, and gas flow rates with exceptional accuracy. Our mobile well test units are designed and manufactured to international standards including ASME B31.3 and ASME Section VIII, featuring truck-mounted multiphase flow meters capable of handling pressures up to 1,500 psig and temperatures up to 350°F.
+                </p>
+                <p>
+                  With extensive operational experience across Indonesia's major oil and gas fields, MPAS serves premier clients including Pertamina Hulu Rokan, Pertamina EP, Chevron Pacific Indonesia, Medco E&P, and VICO Indonesia. Our comprehensive service portfolio includes Mobile Well Test Units (MPFM), 2-phase and 3-phase separation systems, Coriolis and vortex flow meters, and complete well testing services with 24/7 field support. Operating from our head office in Jakarta and advanced workshops in Cikarang and Duri, we combine technical expertise with rapid deployment capabilities to deliver reliable, ASME-certified flow measurement solutions that meet the demanding requirements of Indonesia's energy sector.
+                </p>
+              </div>
+
+              {/* Right-side image gallery */}
+              <div className="about-image-wrapper">
+                {/* Main image */}
+                <div className="about-image-main">
+                  <img
+                    src="images/medco/MEDCO-WESTBELUT.3.jpeg"
+                    alt="Medco West Belut"
+                    className="about-image"
+                  />
+                </div>
+
+                {/* Thumbnails row */}
+                <div className="about-image-row">
+                  <div className="about-thumb-wrapper">
+                    <img
+                      src="/images/medco/MEDCO-MALONG.1.jpeg"
+                      alt="MPAS well test equipment in the field"
+                      className="about-thumb"
+                    />
+                  </div>
+                  <div className="about-thumb-wrapper">
+                    <img
+                      src="/images/medco/MEDCO-TERUBUK.jpeg"
+                      alt="MPAS team and control system panel"
+                      className="about-thumb"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -74,7 +93,7 @@ const About = () => {
               <div className="timeline-year">2008</div>
               <div className="timeline-content">
                 <h4>First Major Project</h4>
-                <p>Early Production Facility for PT Aceh Timur Kawal Energi (Pacific Oil & Gas - Peurlak)</p>
+                <p>Early Production Facility for PT Aceh Timur Kawal Energi (Pacific Oil &amp; Gas - Peurlak)</p>
               </div>
             </div>
             <div className="timeline-item">
@@ -101,8 +120,8 @@ const About = () => {
             <div className="timeline-item">
               <div className="timeline-year">2018</div>
               <div className="timeline-content">
-                <h4>Environmental & Safety Excellence</h4>
-                <p>Achieved ISO 14001:2015 (Environmental Management) and ISO 45001:2018 (Occupational Health & Safety) certifications</p>
+                <h4>Environmental &amp; Safety Excellence</h4>
+                <p>Achieved ISO 14001:2015 (Environmental Management) and ISO 45001:2018 (Occupational Health &amp; Safety) certifications</p>
               </div>
             </div>
             <div className="timeline-item">
@@ -128,22 +147,52 @@ const About = () => {
         <div className="container">
           <div className="vm-grid">
             <div className="vm-card">
-              <div className="vm-icon">🎯</div>
-              <h3>Our Vision</h3>
-              <p>
-                To become a long-term, sustainable provider of Products & Services in niche markets 
-                within the oil & gas industry and other energy sectors, both in Indonesia and 
-                internationally.
-              </p>
+              <div className="vm-image-wrapper">
+                <img 
+                  src="/images/medco/MEDCO-FOREL.jpeg" 
+                  alt="Our Vision" 
+                  className="vm-image"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.parentElement.style.background = 'linear-gradient(135deg, var(--navy-dark) 0%, var(--orange-primary) 100%)';
+                  }}
+                />
+                <div className="vm-image-overlay">
+                  <div className="vm-icon">🎯</div>
+                </div>
+              </div>
+              <div className="vm-content">
+                <h3>Our Vision</h3>
+                <p>
+                  To become a long-term, sustainable provider of Products &amp; Services in niche markets
+                  within the oil &amp; gas industry and other energy sectors, both in Indonesia and
+                  internationally.
+                </p>
+              </div>
             </div>
             <div className="vm-card">
-              <div className="vm-icon">🧭</div>
-              <h3>Our Mission</h3>
-              <p>
-                Helping clients meet their business objectives by providing added values through 
-                technology and engineering-based products and services, with a strong commitment 
-                to QHSE aspects.
-              </p>
+              <div className="vm-image-wrapper">
+                <img 
+                  src="/images/medco/MEDCO-TERUBUK.jpeg" 
+                  alt="Our Mission" 
+                  className="vm-image"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.parentElement.style.background = 'linear-gradient(135deg, var(--orange-primary) 0%, var(--navy-dark) 100%)';
+                  }}
+                />
+                <div className="vm-image-overlay">
+                  <div className="vm-icon">🧭</div>
+                </div>
+              </div>
+              <div className="vm-content">
+                <h3>Our Mission</h3>
+                <p>
+                  Helping clients meet their business objectives by providing added values through
+                  technology and engineering-based products and services, with a strong commitment
+                  to QHSE aspects.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -185,7 +234,7 @@ const About = () => {
       <section className="section section-dark">
         <div className="container">
           <div className="section-header">
-            <h2 style={{color: 'white'}}>Why Choose PT MPAS</h2>
+            <h2 style={{ color: 'white' }}>Why Choose PT MPAS</h2>
             <p className="section-subtitle">Your trusted partner in well test measurement</p>
           </div>
           <div className="features-grid">
@@ -197,7 +246,7 @@ const About = () => {
             <div className="feature-item">
               <div className="feature-icon">✓</div>
               <h4>26 Years Experience</h4>
-              <p>Over two decades of expertise in oil & gas well testing solutions</p>
+              <p>Over two decades of expertise in oil &amp; gas well testing solutions</p>
             </div>
             <div className="feature-item">
               <div className="feature-icon">✓</div>
@@ -231,27 +280,42 @@ const About = () => {
             <p className="section-subtitle">Committed to quality and compliance</p>
           </div>
           <div className="cert-grid">
-            <div className="cert-card" onClick={() => openModal('/images/products/9001.jpg', 'ISO 9001')}>
+            <div
+              className="cert-card"
+              onClick={() => openModal('/images/products/9001.jpg', 'ISO 9001')}
+            >
               <img src="/images/products/9001.jpg" alt="ISO 9001" className="cert-img" />
               <div className="cert-title">ISO 9001</div>
               <p>Quality Management Systems</p>
             </div>
-            <div className="cert-card" onClick={() => openModal('/images/products/14001.jpg', 'ISO 14001')}>
+            <div
+              className="cert-card"
+              onClick={() => openModal('/images/products/14001.jpg', 'ISO 14001')}
+            >
               <img src="/images/products/14001.jpg" alt="ISO 14001" className="cert-img" />
               <div className="cert-title">ISO 14001</div>
               <p>Environmental Management</p>
             </div>
-            <div className="cert-card" onClick={() => openModal('/images/products/45001.jpg', 'ISO 45001')}>
+            <div
+              className="cert-card"
+              onClick={() => openModal('/images/products/45001.jpg', 'ISO 45001')}
+            >
               <img src="/images/products/45001.jpg" alt="ISO 45001" className="cert-img" />
               <div className="cert-title">ISO 45001</div>
-              <p>Occupational Health & Safety</p>
+              <p>Occupational Health &amp; Safety</p>
             </div>
-            <div className="cert-card" onClick={() => openModal('/images/products/spda.jpg', 'SPDA MPAS')}>
+            <div
+              className="cert-card"
+              onClick={() => openModal('/images/products/spda.jpg', 'SPDA MPAS')}
+            >
               <img src="/images/products/spda.jpg" alt="SPDA MPAS" className="cert-img" />
               <div className="cert-title">SPDA MPAS</div>
               <p>Sertifikat Pengganti Dokumen Administrasi</p>
             </div>
-            <div className="cert-card" onClick={() => openModal('/images/products/chesms.jpg', 'e-CHESMS')}>
+            <div
+              className="cert-card"
+              onClick={() => openModal('/images/products/chesms.jpg', 'e-CHESMS')}
+            >
               <img src="/images/products/chesms.jpg" alt="e-CHESMS" className="cert-img" />
               <div className="cert-title">e-CHESMS</div>
               <p>SERTIFIKAT e-CHSEMS PT Pertamina Hulu Rokan</p>
@@ -264,9 +328,15 @@ const About = () => {
       {selectedCert && (
         <div className="cert-modal" onClick={closeModal}>
           <div className="cert-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="cert-modal-close" onClick={closeModal}>&times;</button>
+            <button className="cert-modal-close" onClick={closeModal}>
+              &times;
+            </button>
             <h3>{selectedCert.title}</h3>
-            <img src={selectedCert.image} alt={selectedCert.title} className="cert-modal-img" />
+            <img
+              src={selectedCert.image}
+              alt={selectedCert.title}
+              className="cert-modal-img"
+            />
           </div>
         </div>
       )}
@@ -277,8 +347,12 @@ const About = () => {
           <h2>Ready to Work With Us?</h2>
           <p className="cta-subtitle">Get in touch to discuss your well testing needs</p>
           <div className="cta-buttons">
-            <Link to="/contact" className="btn btn-white">Contact Us</Link>
-            <Link to="/products" className="btn btn-white-outline">View Products</Link>
+            <Link to="/contact" className="btn btn-white">
+              Contact Us
+            </Link>
+            <Link to="/products" className="btn btn-white-outline">
+              View Products
+            </Link>
           </div>
         </div>
       </section>

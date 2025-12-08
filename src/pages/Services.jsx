@@ -152,7 +152,7 @@ const Services = () => {
             {/* Offshore MPFM & GLCC */}
             <div className="service-detail-card">
               <div className="service-image">
-                <img src="images/products/offshore 6.png" alt="Offshore MPFM & GLCC" />
+                <img src="/images/products/offshore 7.png" alt="Offshore MPFM & GLCC" />
               </div>
               <div className="service-text">
                 <div className="service-number">04</div>

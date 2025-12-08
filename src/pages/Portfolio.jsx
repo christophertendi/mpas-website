@@ -1,211 +1,136 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Portfolio.css';
+import { products, productCategories, filterOptions } from '../data/products';
+import './Products.css';
 
-const Portfolio = () => {
-  const [filter, setFilter] = useState('All Projects');
+const Products = () => {
+  const [filters, setFilters] = useState({
+    category: 'All Products'
+  });
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const projects = [
-    {
-      id: 1,
-      name: "Offshore Platform Well Testing",
-      client: "PT Energy Indonesia",
-      category: "Offshore Installation",
-      location: "Jakarta Bay",
-      year: "2024",
-      description: "Complete 2-Phase Accuflow system installation for offshore platform well testing operations.",
-      system: "Accuflow 2-Phase SR Series"
-    },
-    {
-      id: 2,
-      name: "Refinery Pipeline Measurement",
-      client: "National Petroleum Corp",
-      category: "Refinery",
-      location: "Balikpapan",
-      year: "2023",
-      description: "Custom 3-Phase metering system for high water cut crude oil processing facility.",
-      system: "Accuflow 3-Phase Series"
-    },
-    {
-      id: 3,
-      name: "Gas Processing Facility",
-      client: "Indonesian Gas Corporation",
-      category: "Gas Processing",
-      location: "Surabaya",
-      year: "2023",
-      description: "Engineering and installation of multiphase metering for gas condensate wells.",
-      system: "Accuflow 2-Phase JR Series"
-    },
-    {
-      id: 4,
-      name: "Mobile Well Testing Campaign",
-      client: "Pacific Energy Resources",
-      category: "Mobile Testing",
-      location: "Multiple Locations",
-      year: "2024",
-      description: "Truck-mounted Accuflow system for multi-well testing campaign across Sumatra.",
-      system: "Mobile Testing Unit"
-    },
-    {
-      id: 5,
-      name: "Storage Tank Measurement",
-      client: "Indonesian Oil Storage",
-      category: "Storage Facility",
-      location: "Bekasi",
-      year: "2022",
-      description: "Installation of Accuflow systems for accurate tank farm measurement and custody transfer.",
-      system: "Accuflow 2-Phase LT Series"
-    },
-    {
-      id: 6,
-      name: "Pipeline Maintenance Project",
-      client: "Trans-Java Pipeline",
-      category: "Pipeline",
-      location: "Central Java",
-      year: "2023",
-      description: "Ongoing maintenance and calibration services for Trans-Java pipeline metering stations.",
-      system: "Multiple Accuflow Systems"
-    },
-    {
-      id: 7,
-      name: "Petrochemical Complex",
-      client: "Petrochemical Industries",
-      category: "Petrochemical",
-      location: "Cilegon",
-      year: "2024",
-      description: "Complete turnkey solution including design, installation, and commissioning of Accuflow systems.",
-      system: "Accuflow 3-Phase JR Series"
-    },
-    {
-      id: 8,
-      name: "Enhanced Oil Recovery Project",
-      client: "Major Oil Company",
-      category: "Production",
-      location: "Duri, Riau",
-      year: "2024",
-      description: "Trailer-mounted Accuflow for steam flood well testing in mature oil fields.",
-      system: "Trailer-Mounted System"
-    }
-  ];
+  const filteredProducts = products.filter(product => {
+    const matchesCategory = filters.category === 'All Products' || product.category === filters.category;
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         product.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
-  const categories = ['All Projects', 'Offshore Installation', 'Refinery', 'Gas Processing', 'Mobile Testing', 'Production'];
+  const resetFilters = () => {
+    setFilters({
+      category: 'All Products'
+    });
+    setSearchTerm('');
+  };
 
-  const filteredProjects = filter === 'All Projects' 
-    ? projects 
-    : projects.filter(p => p.category === filter);
+  // Get placeholder icon based on category
+  const getPlaceholderIcon = (category) => {
+    if (category === '2-Phase Systems') return '⚙️';
+    if (category === '3-Phase Systems') return '⚙️';
+    if (category === 'Mobile Solutions') return '🚛';
+    return '🔧';
+  };
 
   return (
-    <div className="portfolio-page">
+    <div className="products-page">
       <div className="page-hero">
         <div className="container">
-          <div className="breadcrumb">
-            <Link to="/">Home</Link> / Portfolio
-          </div>
-          <h1>Our Projects</h1>
-          <p>Delivering excellence across Indonesia's energy sector</p>
+          <h1>Product Catalog</h1>
+          <p>Proven well test technology solutions from Accuflow</p>
         </div>
       </div>
 
-      {/* Filters */}
-      <section className="filter-section">
+      <div className="filter-bar">
         <div className="container">
-          <div className="portfolio-filters">
-            {categories.map(cat => (
-              <button
-                key={cat}
-                className={`filter-btn ${filter === cat ? 'active' : ''}`}
-                onClick={() => setFilter(cat)}
+          <div className="filter-content">
+            <div className="filter-group">
+              <select 
+                className="filter-select"
+                value={filters.category}
+                onChange={(e) => setFilters({...filters, category: e.target.value})}
               >
-                {cat}
-              </button>
-            ))}
-          </div>
-          <div className="results-info">
-            Showing {filteredProjects.length} {filteredProjects.length === 1 ? 'project' : 'projects'}
+                {productCategories.map(cat => (
+                  <option key={cat} value={cat}>{cat}</option>
+                ))}
+              </select>
+
+              <input
+                type="text"
+                className="search-box"
+                placeholder="Search products..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+            {(filters.category !== 'All Products' || searchTerm) && (
+              <button className="reset-btn" onClick={resetFilters}>Reset</button>
+            )}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Projects Grid */}
-      <section className="portfolio-section">
+      <section className="catalog-section">
         <div className="container">
-          <div className="portfolio-grid">
-            {filteredProjects.map(project => (
-              <div key={project.id} className="portfolio-card">
-                <div className="portfolio-image">
-                  <div className="portfolio-image-placeholder">🏭</div>
-                  <div className="portfolio-overlay">
-                    <div className="overlay-content">
-                      <h4>{project.name}</h4>
-                      <p>{project.client}</p>
-                      <div className="overlay-meta">
-                        <span>{project.location}</span>
-                        <span>•</span>
-                        <span>{project.year}</span>
-                      </div>
+          <div className="catalog-header">
+            <div className="results-count">
+              Showing {filteredProducts.length} of {products.length} products
+            </div>
+          </div>
+
+          <div className="products-grid">
+            {filteredProducts.map(product => (
+              <div key={product.id} className="product-card">
+                <div className="product-image">
+                  {product.images && product.images[0] ? (
+                    <img 
+                      src={`/images/products/${product.images[0]}`} 
+                      alt={product.name}
+                    />
+                  ) : (
+                    <div className="product-placeholder">
+                      {getPlaceholderIcon(product.category)}
                     </div>
-                  </div>
+                  )}
+                  {product.id <= 2 && <div className="product-badge">Popular</div>}
+                  {product.id === 5 && <div className="product-badge">Service</div>}
                 </div>
-                <div className="portfolio-info">
-                  <div className="portfolio-category">{project.category}</div>
-                  <h3>{project.name}</h3>
-                  <p className="portfolio-client">{project.client}</p>
-                  <p className="portfolio-desc">{project.description}</p>
-                  <div className="portfolio-meta">
-                    <div className="meta-item">
-                      <strong>System:</strong> {project.system}
-                    </div>
-                    <div className="meta-item">
-                      <strong>Location:</strong> {project.location}
-                    </div>
-                    <div className="meta-item">
-                      <strong>Year:</strong> {project.year}
-                    </div>
+                <div className="product-info">
+                  <div className="product-category">{product.category}</div>
+                  <h3 className="product-title">{product.name}</h3>
+                  <p className="product-short-desc">{product.shortDesc}</p>
+                  <ul className="product-specs">
+                    {product.features.slice(0, 3).map((feature, idx) => (
+                      <li key={idx}>{feature}</li>
+                    ))}
+                  </ul>
+                  <div className="product-actions">
+                    <Link to={`/products/${product.id}`} className="btn-view">
+                      View Details
+                    </Link>
+                    <a 
+                      href={`https://wa.me/6281195521770?text=I'm interested in ${product.name}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-whatsapp"
+                    >
+                      💬 Inquiry
+                    </a>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Stats */}
-      <section className="section section-dark">
-        <div className="container">
-          <div className="stats-grid">
-            <div className="stat-item">
-              <div className="stat-number">500+</div>
-              <div className="stat-label">Projects Completed</div>
+          {filteredProducts.length === 0 && (
+            <div className="no-results">
+              <p>No products found matching your criteria.</p>
+              <button onClick={resetFilters} className="btn btn-primary">Reset Filters</button>
             </div>
-            <div className="stat-item">
-              <div className="stat-number">100+</div>
-              <div className="stat-label">Satisfied Clients</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">26</div>
-              <div className="stat-label">Years Experience</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">100%</div>
-              <div className="stat-label">Client Satisfaction</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="cta-section">
-        <div className="container text-center">
-          <h2>Start Your Project With Us</h2>
-          <p className="cta-subtitle">Let's discuss how we can help with your well testing needs</p>
-          <div className="cta-buttons">
-            <Link to="/contact" className="btn btn-white">Get in Touch</Link>
-            <Link to="/products" className="btn btn-white-outline">View Products</Link>
-          </div>
+          )}
         </div>
       </section>
     </div>
   );
 };
 
-export default Portfolio;
+export default Products;

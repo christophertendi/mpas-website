@@ -1,4 +1,4 @@
-// Product data - 4 Core Accuflow Systems
+// Product data - 4 Core Accuflow Systems + Mobile Well Test
 export const products = [
   {
     id: 1,
@@ -138,16 +138,93 @@ export const products = [
     },
     images: ["3phase-jr-1.png", "3phase-jr-2.png","3phase-jr-3.png", "3phase-jr-4.png","3phase-jr-5.png"],
     brochurePage: 7
+  },
+  {
+    id: 5,
+    name: "Mobile Well Test Unit",
+    category: "Mobile Solutions",
+    shortDesc: "Truck-mounted well testing system with integrated Accuflow MPFM for rapid deployment",
+    description: "The MPAS Mobile Well Test Unit combines proven Accuflow multiphase flow meter technology with a complete separation and testing system mounted on a heavy-duty truck platform. Designed for rapid deployment and continuous field operations, these units support over 10,000 well tests annually across Indonesia. Each unit features integrated three-phase separation, accurate metering, and comprehensive safety systems, providing a complete solution for production well testing without the need for permanent facilities.",
+    features: [
+      "Truck-mounted for rapid deployment",
+      "Integrated Accuflow MPFM technology",
+      "Complete 3-phase separation system",
+      "Real-time production monitoring",
+      "Automated well test sequencing",
+      "PLC control with HMI interface",
+      "SCADA connectivity for remote monitoring",
+      "Gas flare system with safety interlocks",
+      "Produced water handling system",
+      "Self-contained power generation",
+      "ASME-certified pressure vessels",
+      "Full safety instrumentation package"
+    ],
+    benefits: [
+      "Rapid mobilization to well sites",
+      "Eliminates need for permanent test facilities",
+      "Proven reliability - 10,000+ tests annually",
+      "Reduced well testing costs",
+      "Accurate production data for reservoir management",
+      "Experienced field operations team",
+      "Comprehensive HSE compliance",
+      "Available for short-term rental or long-term contracts",
+      "Minimal site preparation required",
+      "Quick start-up and commissioning"
+    ],
+    specs: {
+      "Liquid Capacity": "100 - 3000 BFPD",
+      "Gas Capacity": "0.5 - 5 MMSCFD",
+      "Operating Pressure": "50 - 500 Psig",
+      "Separator Configuration": "Vertical 3-phase",
+      "Oil Metering": "Turbine meter ±1% accuracy",
+      "Water Metering": "Magnetic flowmeter ±0.5%",
+      "Gas Metering": "Orifice/Ultrasonic ±2%",
+      "MPFM Technology": "Accuflow GLCC-based",
+      "Control System": "PLC with color HMI",
+      "Data Storage": "90 days minimum",
+      "Power Supply": "Onboard diesel generator",
+      "Truck Platform": "Heavy-duty 6x4 configuration",
+      "Crew Cabin": "Air-conditioned operator shelter",
+      "Certifications": "ISO 9001, ASME, local HSE compliance"
+    },
+    applications: [
+      "Production well testing",
+      "New well commissioning",
+      "Well performance evaluation",
+      "Workover validation",
+      "Field development campaigns",
+      "Temporary production during facility maintenance",
+      "Extended well testing",
+      "Reservoir characterization"
+    ],
+    clients: [
+      "PT Pertamina Hulu Rokan (2021-2027)",
+      "Chevron Pacific Indonesia (2011-2021)",
+      "PT Pertamina EP Zona 7 (2009-Present)",
+      "Supreme Energy Geothermal (2018)"
+    ],
+    services: [
+      "Mobile well test operations",
+      "Sonolog fluid level measurement",
+      "Proving and calibration services",
+      "Field supervision and reporting",
+      "24/7 operational support",
+      "Data analysis and interpretation",
+      "Equipment rental with operators",
+      "Training and technical support"
+    ],
+    images: ["mobile well test 1.png", "mobile well test 2.png", "mobile well test 3.png", "mobile well test 4.png"]
   }
 ];
 
 export const productCategories = [
   "All Products",
   "2-Phase Systems",
-  "3-Phase Systems"
+  "3-Phase Systems",
+  "Mobile Solutions"
 ];
 
 export const filterOptions = {
-  pipeType: ["Pipe Type", "2-Phase", "3-Phase"],
-  configuration: ["Configuration", "SR Series", "JR Series"]
+  pipeType: ["Pipe Type", "2-Phase", "3-Phase", "Mobile"],
+  configuration: ["Configuration", "SR Series", "JR Series", "Mobile Unit"]
 };
