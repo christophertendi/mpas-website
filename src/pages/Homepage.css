@@ -1,5 +1,7 @@
 /* Hero Section */
 .hero {
+  width: 100%;
+  margin: 0;
   min-height: 90vh;
   background: linear-gradient(rgba(26, 35, 50, 0.7), rgba(26, 35, 50, 0.7)),
               url('/images/medco/MEDCO-WESTBELUT.2.jpeg') center/cover no-repeat;
@@ -60,11 +62,15 @@
 .scroll-indicator {
   position: absolute;
   bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 24px; /* Match your SVG width */
   cursor: pointer;
   opacity: 0.7;
   transition: opacity var(--transition-normal);
+  display: flex;
+  justify-content: center;
 }
 
 .scroll-indicator:hover {
@@ -562,9 +568,9 @@
 }
 
 .arrow {
-  font-size: 24px;
+  font-size: 100px;
   color: var(--orange-primary);
-  transition: color var(--transition-normal);
+  transition: color var(--transition-normal);  
 }
 
 @keyframes fadeIn {
@@ -871,5 +877,14 @@
   
   .hero-subtitle {
     font-size: 14px;
+  }
+}
+
+
+@media (max-width: 640px) {
+  .scroll-indicator {
+    bottom: 30px;
+    left: 0;
+    right: 0;
   }
 }
