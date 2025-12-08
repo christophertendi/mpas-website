@@ -79,8 +79,8 @@ const Footer = () => {
         <div className="footer-bottom">
           <div>&copy; 2025 PT Mitra Prana Abadi Sentosa. All rights reserved.</div>
           <div className="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            {/* <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a> */}
           </div>
         </div>
       </div>
