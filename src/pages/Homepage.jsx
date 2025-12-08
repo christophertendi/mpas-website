@@ -325,7 +325,7 @@ const clientProjects = {
           </div>
           <div className="services-grid">
             <div className="service-card">
-              <div className="service-icon">📱</div>
+              <div className="service-icon">🚚</div>
               <h3>Mobile Well Testing</h3>
               <p>Truck and trailer-mounted Accuflow systems for on-demand field testing</p>
               <Link to="/services" className="service-link">
