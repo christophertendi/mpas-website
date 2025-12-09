@@ -8,7 +8,7 @@
 .contact-page .page-hero {
   min-height: 50vh;
   background: linear-gradient(rgba(26, 35, 50, 0.75), rgba(26, 35, 50, 0.75)),
-              url('/images/products/sonolog 1.png') center/cover no-repeat;
+              url('/images/products/contacthero.jpeg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;

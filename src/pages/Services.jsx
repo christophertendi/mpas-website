@@ -39,7 +39,7 @@ const Services = () => {
             {/* Mobile Well Test */}
             <div className="service-detail-card">
               <div className="service-image">
-                <img src="images/products/mobile well test 1.png" alt="Mobile Well Test Unit" />
+                <img src="/images/products/phrsouth1.jpeg" alt="Mobile Well Test Unit" />
               </div>
               <div className="service-text">
                 <div className="service-number">01</div>
@@ -115,7 +115,7 @@ const Services = () => {
             {/* Operation & Maintenance */}
             <div className="service-detail-card">
               <div className="service-image">
-                <img src="images/products/ops 4.png" alt="Operation & Maintenance" />
+                <img src="/images/products/O&M.jpeg" alt="Operation & Maintenance" />
               </div>
               <div className="service-text">
                 <div className="service-number">03</div>
