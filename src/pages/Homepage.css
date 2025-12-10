@@ -496,6 +496,62 @@
   font-size: 15px;
 }
 
+/* Client Logos Section in Modal */
+.client-logos-section {
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background: var(--gray-lightest);
+  border-radius: var(--radius-md);
+}
+
+.client-logos-section h3 {
+  color: var(--navy-dark);
+  margin-bottom: var(--spacing-md);
+  font-size: 20px;
+}
+
+.client-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.client-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--gray-light);
+  min-height: 120px;
+}
+
+.logo-placeholder-box {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.logo-placeholder-box span {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--navy-dark);
+}
+
+.logo-placeholder-box small {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.modal-client-logo {
+  max-width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+}
+
 .products-used h3 {
   color: var(--navy-dark);
   margin-bottom: var(--spacing-md);
@@ -746,6 +802,24 @@
 }
 
 @media (max-width: 640px) {
+  /* Disable flip card hover effect on mobile */
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+  
+  /* Remove tap-to-flip on mobile */
+  .flip-card.active .flip-card-inner {
+    transform: none;
+  }
+  
+  /* Make both sides visible on mobile - show front only */
+  .flip-card-back {
+    display: none;
+  }
+  
+  .flip-card-front {
+    position: relative;
+  }
   .hero {
     min-height: 100vh; /* CHANGED: Increased from 75vh to ensure full content visibility */
     padding: 80px var(--spacing-md) var(--spacing-xl); /* ADDED: Extra top padding for mobile */
@@ -865,6 +939,22 @@
     font-size: 11px;
   }
 
+  .client-logos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .client-logo-item {
+    min-height: 100px;
+  }
+
+  .logo-placeholder-box span {
+    font-size: 16px;
+  }
+
+  .logo-placeholder-box small {
+    font-size: 12px;
+  }
+
   .scroll-indicator {
     bottom: 30px;
     left: 0;
@@ -886,5 +976,3 @@
     font-size: 14px;
   }
 }
-
-

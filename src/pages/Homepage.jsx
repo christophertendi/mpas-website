@@ -219,6 +219,51 @@ const clientProjects = {
       }
     ],
     tag: 'Energy Sector'
+  },
+
+  'south-sudan': {
+    name: 'South Sudan Operations',
+    project: 'Mobile MPFM Well Testing - GPOC & Nile Delta',
+    location: 'South Sudan',
+    date: '2020–2021',
+    description:
+      'Provided Mobile Multiphase Flow Meter (MPFM) systems for well testing operations serving two major oil and gas companies in South Sudan. The Mobile MPFM equipment was designed to measure liquid (Oil + Water) flow and gas flow of Light Crude production with operating pressure up to 1000 psig and temperatures up to 250°F. Truck-mounted units included complete operator cabin, PLC control system, HMI interface, and comprehensive data acquisition capabilities.',
+    clientLogos: [
+      {
+        name: 'GPOC',
+        src: '/images/gpoc.png',
+        altText: 'Greater Pioneer Operating Company',
+        placeholder: false 
+      },
+      {
+        name: 'Nile Delta',
+        src: '/images/nile delta.png',
+        altText: 'Nile Delta Petroleum Company',
+        placeholder: false  
+      }
+    ],
+    products: [
+      {
+        name: 'Mobile MPFM System',
+        model: 'Accuflow MPFM S/N 1707',
+        link: '/products/5'
+      }
+    ],
+    services: [
+      {
+        name: 'Mobile Well Test Operations',
+        detail: 'Truck-mounted MPFM units with 2-phase full-separation method for accurate measurement.'
+      },
+      {
+        name: 'Production Monitoring & Data Acquisition',
+        detail: 'PLC-based control system with HMI for real-time monitoring, data logging, and automated report generation.'
+      },
+      {
+        name: 'Field Engineering Support',
+        detail: 'On-site operations team including field engineers, lab specialists, and instrument technicians.'
+      }
+    ],
+    tag: 'International Project'
   }
 };
 
@@ -401,7 +446,7 @@ const clientProjects = {
             </div>
 
             {/* VICO Indonesia */}
-            <div className="flip-card" onClick={() => openModal('vico')}>
+            {/* <div className="flip-card" onClick={() => openModal('vico')}>
               <div className="flip-card-inner">
                 <div className="flip-card-front">
                   <div className="client-logo-placeholder">
@@ -414,7 +459,7 @@ const clientProjects = {
                   <button className="btn-view-project">View Project Details</button>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Petro Energy Fula */}
             <div className="flip-card" onClick={() => openModal('petro-energy-fula')}>
@@ -495,6 +540,28 @@ const clientProjects = {
                 </div>
               </div>
             </div> */}
+            {/* South Sudan Operations */}
+            <div className="flip-card" onClick={() => openModal('south-sudan')}>
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="client-logo-placeholder">
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px'}}>
+                    <img 
+                      src="/images/south sudan flag.png" 
+                      alt="South Sudan Flag" 
+                      style={{width: '80px', height: 'auto', borderRadius: '4px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)'}}
+                    />
+                      <span>South Sudan Operations<br/><small style={{fontSize: '14px', color: '#666'}}>GPOC & Nile Delta</small></span>
+                    </div>
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <h4>South Sudan Operations</h4>
+                  <p>Mobile MPFM Well Testing - GPOC & Nile Delta (2020-2021)</p>
+                  <button className="btn-view-project">View Project Details</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -594,6 +661,27 @@ const clientProjects = {
                   </div>
                 )}
               </div>
+
+              {/* Client Logos for multi-company projects */}
+              {selectedClient.clientLogos && selectedClient.clientLogos.length > 0 && (
+                <div className="client-logos-section">
+                  <h3>Client Companies</h3>
+                  <div className="client-logos-grid">
+                    {selectedClient.clientLogos.map((logo, index) => (
+                      <div key={index} className="client-logo-item">
+                        {logo.placeholder ? (
+                          <div className="logo-placeholder-box">
+                            <span>{logo.name}</span>
+                            <small>{logo.altText}</small>
+                          </div>
+                        ) : (
+                          <img src={logo.src} alt={logo.altText} className="modal-client-logo" />
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div className="project-description">
                 <h3>Project Overview</h3>
