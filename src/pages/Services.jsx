@@ -301,7 +301,7 @@ const Services = () => {
             {/* Calibration & Certification */}
             <div className="service-detail-card">
               <div className="service-image">
-                <img src="images/products/calibration and certification.png" alt="Calibration Services" />
+                <img src="/images/products/KALIBRASI UNIT - DIMET BDG.4.jpeg" alt="Calibration Services" />
               </div>
               <div className="service-text">
                 <div className="service-number">08</div>

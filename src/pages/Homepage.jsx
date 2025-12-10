@@ -465,7 +465,7 @@ const clientProjects = {
             </div>
 
             {/* Star Energy Geothermal */}
-            <div className="flip-card" onClick={() => openModal('star-energy')}>
+            {/* <div className="flip-card" onClick={() => openModal('star-energy')}>
               <div className="flip-card-inner">
                 <div className="flip-card-front">
                   <div className="client-logo-placeholder">
@@ -478,10 +478,10 @@ const clientProjects = {
                   <button className="btn-view-project">View Project Details</button>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Supreme Energy */}
-            <div className="flip-card" onClick={() => openModal('supreme-energy')}>
+            {/* <div className="flip-card" onClick={() => openModal('supreme-energy')}>
               <div className="flip-card-inner">
                 <div className="flip-card-front">
                   <div className="client-logo-placeholder">
@@ -494,7 +494,7 @@ const clientProjects = {
                   <button className="btn-view-project">View Project Details</button>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
