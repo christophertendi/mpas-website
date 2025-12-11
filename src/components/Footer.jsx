@@ -78,6 +78,15 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <div>&copy; 2025 PT Mitra Prana Abadi Sentosa. All rights reserved.</div>
+          <div className="footer-stats">
+            <span className="stats-label">Total Visits</span>
+            <img 
+              src="https://hitwebcounter.com/counter/counter.php?page=17292479&style=0007&nbdigits=6&type=page&initCount=0" 
+              title="Total Website Visits" 
+              alt="Web Visits Counter"
+              style={{border: 'none'}}
+            />
+          </div>
           <div className="footer-bottom-links">
             {/* <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a> */}

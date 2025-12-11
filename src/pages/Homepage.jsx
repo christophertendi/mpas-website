@@ -109,7 +109,7 @@ const clientProjects = {
     services: [
       {
         name: 'MPFM Design, Supply & Commissioning',
-        detail: 'Engineering, fabrication and start-up of Accuflow MPFM skid for Fula project.'
+        detail: 'Engineering, fabrication and start-up of MPFM skid for Fula project.'
       },
       {
         name: 'PLC & HMI Integration',
@@ -312,7 +312,7 @@ const clientProjects = {
           <div className="trust-grid">
             <div className="trust-item">
               <div className="trust-icon">🏆</div>
-              <div className="trust-number">ISO 9001</div>
+              <div className="trust-number">ISO 9001, 45001, 14001</div>
               <div className="trust-text">Certified Quality</div>
             </div>
             <div className="trust-item">
@@ -328,7 +328,7 @@ const clientProjects = {
             <div className="trust-item">
               <div className="trust-icon">⭐</div>
               <div className="trust-number">100+</div>
-              <div className="trust-text">Satisfied Clients</div>
+              <div className="trust-text">Well-Executed Projects</div>
             </div>
           </div>
         </div>
@@ -338,14 +338,14 @@ const clientProjects = {
       <section className="section">
         <div className="container">
           <div className="section-header">
-            <h2>Industry-Leading Multiphase Flow Solutions</h2>
-            <p className="section-subtitle">Specializing in Accuflow technology for precise oil, gas, and water measurement</p>
+            <h2>Industry-Leading Multiphase Flow Measurment Solutions</h2>
+            <p className="section-subtitle">Specializing in Production Well Testing, Flow Measurement Technology and Quality Assurance</p>
           </div>
           <div className="overview-grid">
             <div className="overview-card">
               <div className="overview-icon">🔬</div>
-              <h3>Accuflow MPFM Technology</h3>
-              <p>Advanced multiphase flow meters providing accurate real-time measurements of oil, gas, and water without separation.</p>
+              <h3>MPFM Technology</h3>
+              <p>Advanced multiphase flow meters providing accurate real-time measurements of oil, gas, and water.</p>
             </div>
             <div className="overview-card">
               <div className="overview-icon">🛠️</div>
