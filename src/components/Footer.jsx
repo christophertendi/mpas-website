@@ -1,8 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
+  const [visitCount, setVisitCount] = useState(0);
+
+  useEffect(() => {
+    // Check if this is a new session
+    const hasVisitedThisSession = sessionStorage.getItem('hasVisited');
+    
+    // Get current visit count from localStorage
+    let currentCount = localStorage.getItem('websiteVisits');
+    
+    if (currentCount) {
+      currentCount = parseInt(currentCount);
+    } else {
+      // Initialize with a starting number (change this to your current count)
+      currentCount = 0;
+    }
+    
+    // Only increment if this is a new session (new tab/browser open)
+    if (!hasVisitedThisSession) {
+      currentCount += 1;
+      localStorage.setItem('websiteVisits', currentCount);
+      sessionStorage.setItem('hasVisited', 'true');
+    }
+    
+    // Update state
+    setVisitCount(currentCount);
+  }, []);
+
+  // Format number to always show 6 digits
+  const formatCount = (num) => {
+    return num.toString().padStart(6, '0').split('');
+  };
+
   return (
     <footer className="footer">
       <div className="container">
@@ -80,12 +112,11 @@ const Footer = () => {
           <div>&copy; 2025 PT Mitra Prana Abadi Sentosa. All rights reserved.</div>
           <div className="footer-stats">
             <span className="stats-label">Total Visits</span>
-            <img 
-              src="https://hitwebcounter.com/counter/counter.php?page=17292479&style=0007&nbdigits=6&type=page&initCount=0" 
-              title="Total Website Visits" 
-              alt="Web Visits Counter"
-              style={{border: 'none'}}
-            />
+            <div className="counter-display">
+              {formatCount(visitCount).map((digit, index) => (
+                <span key={index} className="counter-digit">{digit}</span>
+              ))}
+            </div>
           </div>
           <div className="footer-bottom-links">
             {/* <a href="#">Privacy Policy</a>

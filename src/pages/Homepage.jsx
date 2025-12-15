@@ -267,7 +267,7 @@ const clientProjects = {
           <div className="trust-grid">
             <div className="trust-item">
               <div className="trust-icon">🏆</div>
-              <div className="trust-number">ISO 9001</div>
+               <div className="trust-number">ISO 9001, 45001, 14001</div>
               <div className="trust-text">Certified Quality</div>
             </div>
             <div className="trust-item">
@@ -283,7 +283,7 @@ const clientProjects = {
             <div className="trust-item">
               <div className="trust-icon">⭐</div>
               <div className="trust-number">100+</div>
-              <div className="trust-text">Satisfied Clients</div>
+              <div className="trust-text">Well Executed Projects</div>
             </div>
           </div>
         </div>
