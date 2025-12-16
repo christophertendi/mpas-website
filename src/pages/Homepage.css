@@ -503,6 +503,47 @@
   font-size: 15px;
 }
 
+/* Client Companies Section (for South Sudan) */
+.client-companies {
+  margin: var(--spacing-xl) 0;
+}
+
+.client-companies h3 {
+  color: var(--navy-dark);
+  margin-bottom: var(--spacing-md);
+  font-size: 20px;
+}
+
+.client-companies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.client-company-card {
+  background: white;
+  border: 2px solid var(--gray-light);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  transition: all var(--transition-normal);
+}
+
+.client-company-card:hover {
+  border-color: var(--orange-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.client-company-logo {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+}
+
 .products-used h3 {
   color: var(--navy-dark);
   margin-bottom: var(--spacing-md);

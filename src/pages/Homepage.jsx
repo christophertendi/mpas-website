@@ -145,6 +145,47 @@ const clientProjects = {
     tag: 'Historical Partner'
   },
 
+  'south-sudan': {
+    name: 'South Sudan Operations',
+    project: 'Mobile MPFM Well Testing - GPOC & Nile Delta',
+    location: 'South Sudan',
+    date: '2020–2021',
+    description:
+      'Provided Mobile Multiphase Flow Meter (MPFM) systems for well testing operations serving two major oil and gas companies in South Sudan. The Mobile MPFM equipment was designed to measure liquid (Oil + Water) flow and gas flow of Light Crude production with operating pressure up to 1000 psig and temperatures up to 250°F. Truck-mounted units included complete operator cabin, PLC control system, HMI interface, and comprehensive data acquisition capabilities.',
+    products: [
+      {
+        name: 'Mobile MPFM System',
+        model: 'S/N 1707',
+        link: '/products/5'
+      }
+    ],
+    services: [
+      {
+        name: 'Mobile MPFM Well Testing',
+        detail: 'Truck-mounted MPFM units with Accuflow technology for accurate 3-phase flow measurement.'
+      },
+      {
+        name: 'PLC Control & Data Acquisition',
+        detail: 'Automated level control, flow computation, and real-time data logging with HMI display.'
+      },
+      {
+        name: 'Field Operations & Support',
+        detail: 'Complete well test services including rig-up, testing, data reporting, and 24/7 field support.'
+      }
+    ],
+    clients: [
+      {
+        name: 'GPOC (Greater Pioneer Operating Company)',
+        logo: '/images/gpoc.png'
+      },
+      {
+        name: 'Nile Delta',
+        logo: '/images/nile delta.png'
+      }
+    ],
+    tag: 'International Project'
+  },
+
   'medco': {
     name: 'Medco E&P Natuna',
     project: 'Offshore MPFM Installations',
@@ -473,6 +514,22 @@ const clientProjects = {
               </div>
             </div>
 
+            {/* South Sudan Operations */}
+            <div className="flip-card" onClick={() => openModal('south-sudan')}>
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="client-logo-placeholder">
+                    <img src="/images/south sudan flag.png" alt="South Sudan Operations" className="client-logo" />
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <h4>South Sudan Operations</h4>
+                  <p>Mobile MPFM Well Testing - GPOC & Nile Delta (2020-2021)</p>
+                  <button className="btn-view-project">View Project Details</button>
+                </div>
+              </div>
+            </div>
+
             {/* Star Energy Geothermal */}
             {/* <div className="flip-card" onClick={() => openModal('star-energy')}>
               <div className="flip-card-inner">
@@ -608,6 +665,20 @@ const clientProjects = {
                 <h3>Project Overview</h3>
                 <p>{selectedClient.description}</p>
               </div>
+
+              {/* Client Companies - for South Sudan */}
+              {selectedClient.clients && selectedClient.clients.length > 0 && (
+                <div className="client-companies">
+                  <h3>Client Companies</h3>
+                  <div className="client-companies-grid">
+                    {selectedClient.clients.map((client, index) => (
+                      <div key={index} className="client-company-card">
+                        <img src={client.logo} alt={client.name} className="client-company-logo" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div className="products-used">
                 {/* Products */}
