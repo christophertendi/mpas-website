@@ -168,7 +168,7 @@ const ProductDetail = () => {
                   >
                     📄 Accuflow Brochure (PDF)
                   </a>
-                  {product.id === 5 && (
+                  {/* {product.id === 5 && (
                     <a 
                       href="/Compro_MPAS_2025_-_EN.pdf" 
                       className="download-link"
@@ -178,7 +178,7 @@ const ProductDetail = () => {
                     >
                       📄 MPAS Company Profile (PDF)
                     </a>
-                  )}
+                  )} */}
                 </div>
               </div>
 
