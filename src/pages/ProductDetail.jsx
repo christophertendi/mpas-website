@@ -160,13 +160,12 @@ const ProductDetail = () => {
                 <h4>Download Documents</h4>
                 <div className="download-links">
                   <a 
-                    href="public/accuflow brochure new_250610_145406.pdf" 
+                    href="https://drive.google.com/file/d/1WQ8k6EtoDJraVpYKRBX7gIAAammGccy1/view?usp=sharing" 
                     className="download-link"
-                    download="Accuflow_Product_Brochure.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    📄 Accuflow Brochure (PDF)
+                    📄 Accuflow Brochure 2025
                   </a>
                   {/* {product.id === 5 && (
                     <a 
