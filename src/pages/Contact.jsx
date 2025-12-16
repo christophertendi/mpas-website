@@ -166,6 +166,7 @@ ${formData.message}
                     <option value="3-Phase Metering System">3-Phase Metering System</option>
                     <option value="Mobile Testing Unit">Mobile Testing Unit</option>
                     <option value="Engineering Services">Engineering Services</option>
+                    <option value="Operation & Maintenance">Operation & Maintenance</option>
                     <option value="Installation & Maintenance">Installation & Maintenance</option>
                     <option value="General Inquiry">General Inquiry</option>
                   </select>

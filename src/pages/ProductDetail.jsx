@@ -185,7 +185,7 @@ const ProductDetail = () => {
               {/* Actions */}
               <div className="product-detail-actions">
                 <a 
-                  href={`https://wa.me/6281195521770?text=I'm interested in ${product.name}`}
+                  href={`https://wa.me/6281380365608?text=I'm interested in ${product.name}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-primary btn-large"

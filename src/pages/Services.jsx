@@ -46,9 +46,10 @@ const Services = () => {
                 <div className="service-content">
                   <h3>Mobile Well Test Services</h3>
                   <p className="service-desc">
-                    Comprehensive production well testing services with mobile units equipped with 
-                    Accuflow multiphase metering technology for accurate measurement of oil, gas, 
-                    and water production.
+                    We provide comprehensive production well testing services using mobile units 
+                    integrated with Accuflow multiphase measurement technology and other technologies, 
+                    ensuring highly accurate measurement of oil, gas, and water production to support 
+                    optimal field performance.
                   </p>
                   <div className="service-features">
                     <div className="feature-col">
@@ -85,9 +86,8 @@ const Services = () => {
                 <div className="service-content">
                   <h3>Sonolog Services</h3>
                   <p className="service-desc">
-                    Fluid level measurement services using advanced acoustic technology for 
-                    accurate determination of static and dynamic fluid levels in production 
-                    and injection wells.
+                    Sonolog fluid level measurement services utilizing advanced acoustic technology to deliver 
+                    precise evaluation of static and dynamic fluid levels in both production and injection wells.
                   </p>
                   <div className="service-features">
                     <div className="feature-col">
@@ -141,7 +141,7 @@ const Services = () => {
                       <ul>
                         <li>Pertamina EP - Zona 7 Field Tambun (2019-2025)</li>
                         <li>Bumi Siak Pusako - Wet Oil Shipment CTM (2025)</li>
-                        <li>Chevron Pacific Indonesia - SLO (2016-2018)</li>
+                        <li>Chevron Pacific Indonesia - SLN & SLO (2016-2018)</li>
                       </ul>
                     </div>
                   </div>
@@ -318,6 +318,7 @@ const Services = () => {
                         <li>Flow meter calibration & proving</li>
                         <li>Pressure & temperature instrument calibration</li>
                         <li>Multiphase meter verification</li>
+                        <li>Custody Transfer Metering</li>
                         <li>Certification documentation</li>
                         <li>Traceable to national standards</li>
                       </ul>
@@ -327,6 +328,7 @@ const Services = () => {
                       <ul>
                         <li>Pertamina Hulu Rokan (2021-2027)</li>
                         <li>Chevron Pacific Indonesia (2011-2021)</li>
+                        <li>PT. Bumi Siak Pusako (2024-2025)</li>
                         <li>Regular calibration programs</li>
                       </ul>
                     </div>
@@ -384,7 +386,7 @@ const Services = () => {
             <div className="cta-buttons">
               <Link to="/contact" className="btn-primary">Request a Quote</Link>
               <a 
-                href="https://wa.me/6281195521770" 
+                href="https://wa.me/6281380365608" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn-whatsapp"
