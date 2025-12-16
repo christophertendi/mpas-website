@@ -211,7 +211,7 @@ ${formData.message}
                   <h4>Prefer instant messaging?</h4>
                   <div className="alt-buttons">
                     <a
-                      href={`https://wa.me/${whatsappNumber}`}
+                      href={`https://wa.me/6281380365608`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-whatsapp-alt"
