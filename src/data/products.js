@@ -179,7 +179,7 @@ export const products = [
       "Pressure Drop": "3-4 psi (max)",
       "Connection Size": "3\"-600# RF Flanged",
       "Operating Modes": "Junior Mode (0-700 BFPD) / Senior Mode (400-5,500 BFPD)",
-      "Gas Metering": "Micro Motion F Series 1\" Coriolis (or Vortex/USM)",
+      "Gas Metering": "Micro Motion F Series 1\" - 3\" Coriolis (or Vortex/USM) ",
       "Liquid Metering (Junior)": "Micro Motion Elite CMF100M 1 (Coriolis)",
       "Liquid Metering (Senior)": "Micro Motion Elite CMF300M 3 (Coriolis)",
       "Control System": "Schneider PLC M340 with HMI",

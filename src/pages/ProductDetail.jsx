@@ -160,7 +160,7 @@ const ProductDetail = () => {
                 <h4>Download Documents</h4>
                 <div className="download-links">
                   <a 
-                    href="/accuflow brochure new_250610_145406.pdf" 
+                    href="/accuflow_brochure_new_250610_145406.pdf" 
                     className="download-link"
                     download="Accuflow_Product_Brochure.pdf"
                     target="_blank"
