@@ -242,7 +242,7 @@
 
 .features-list li:before,
 .benefits-list li:before {
-  content: "âœ“";
+  content: "•";
   color: var(--orange-primary);
   font-weight: 700;
   font-size: 18px;
@@ -445,5 +445,26 @@
 
   .product-detail-actions {
     flex-direction: column;
+  }
+
+  /* ADD THESE */
+  .thumbnail-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 8px;
+    padding-bottom: 10px;
+  }
+
+  .thumbnail {
+    flex: 0 0 70px;
+    height: 60px;
+    scroll-snap-align: start;
+  }
+
+  .main-product-image {
+    height: 300px;
   }
 }
