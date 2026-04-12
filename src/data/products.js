@@ -220,7 +220,7 @@ export const products = [
       "Equipment rental with operators",
       "Training and technical support"
     ],
-    images: ["mobile well test 1.png", "mobile well test 2.png", "mobile well test 3.png", "mobile well test 4.png"]
+    images: ["mobile well test 1.png", "mobile well test 2.png", "mobile well test 3.png", "mobile well test 4.png", "pthr1.png", "pthr2.png", "pthr3.png"]
   }
 ];
 

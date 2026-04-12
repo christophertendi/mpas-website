@@ -94,14 +94,35 @@
   z-index: 1;
 }
 
+/* Thumbnail Strip - horizontal scroll */
 .thumbnail-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;        /* changed from auto → scroll, always shows */
+  padding-bottom: 10px;      /* more room for the scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange-primary) var(--gray-lightest);
+}
+
+.thumbnail-grid::-webkit-scrollbar {
+  height: 6px;               /* slightly thicker so it's more visible */
+  display: block;            /* force always visible in webkit */
+}
+
+.thumbnail-grid::-webkit-scrollbar-track {
+  background: var(--gray-light);   /* slightly darker track so it's obvious */
+  border-radius: 4px;
+}
+
+.thumbnail-grid::-webkit-scrollbar-thumb {
+  background: var(--orange-primary);
+  border-radius: 4px;
+  min-width: 40px;           /* thumb never collapses to nothing */
 }
 
 .thumbnail {
-  height: 100px;
+  flex: 0 0 90px;        /* fixed width, never shrinks */
+  height: 70px;
   background: var(--gray-lightest);
   border: 2px solid transparent;
   border-radius: var(--radius-sm);
@@ -139,7 +160,7 @@
 }
 
 .thumbnail-placeholder {
-  font-size: 32px;
+  font-size: 28px;
 }
 
 /* Product Details */
@@ -221,7 +242,7 @@
 
 .features-list li:before,
 .benefits-list li:before {
-  content: "✓";
+  content: "âœ“";
   color: var(--orange-primary);
   font-weight: 700;
   font-size: 18px;
