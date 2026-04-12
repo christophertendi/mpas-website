@@ -2,6 +2,8 @@
 
 .product-detail-page {
   margin-top: 80px;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .product-detail-hero {
@@ -41,6 +43,8 @@
 
 .product-detail-section {
   padding: var(--spacing-3xl) 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .product-detail-grid {
@@ -94,35 +98,17 @@
   z-index: 1;
 }
 
-/* Thumbnail Strip - horizontal scroll */
+/* Thumbnail grid - desktop: wrapping grid */
 .thumbnail-grid {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
-  overflow-x: scroll;        /* changed from auto → scroll, always shows */
-  padding-bottom: 10px;      /* more room for the scrollbar */
-  scrollbar-width: thin;
-  scrollbar-color: var(--orange-primary) var(--gray-lightest);
-}
-
-.thumbnail-grid::-webkit-scrollbar {
-  height: 6px;               /* slightly thicker so it's more visible */
-  display: block;            /* force always visible in webkit */
-}
-
-.thumbnail-grid::-webkit-scrollbar-track {
-  background: var(--gray-light);   /* slightly darker track so it's obvious */
-  border-radius: 4px;
-}
-
-.thumbnail-grid::-webkit-scrollbar-thumb {
-  background: var(--orange-primary);
-  border-radius: 4px;
-  min-width: 40px;           /* thumb never collapses to nothing */
+  padding-bottom: 4px;
 }
 
 .thumbnail {
-  flex: 0 0 90px;        /* fixed width, never shrinks */
-  height: 70px;
+  flex: 0 0 80px;
+  height: 80px;
   background: var(--gray-lightest);
   border: 2px solid transparent;
   border-radius: var(--radius-sm);
@@ -229,13 +215,15 @@
 .features-list,
 .benefits-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .features-list li,
 .benefits-list li {
   padding: 10px 0;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   gap: 12px;
   border-bottom: 1px solid var(--gray-light);
 }
@@ -245,8 +233,9 @@
   content: "•";
   color: var(--orange-primary);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 22px;
   flex-shrink: 0;
+  line-height: 1.2;
 }
 
 .features-list li:last-child,
@@ -274,10 +263,6 @@
   width: 40%;
 }
 
-.specs-table th:has-text("SR") {
-  color: #0066cc;
-}
-
 .specs-table td {
   padding: 14px;
   border-bottom: 1px solid var(--gray-light);
@@ -289,7 +274,6 @@
   border-bottom: none;
 }
 
-/* Highlight SR and LT rows */
 .specs-table tr:nth-child(1) th,
 .specs-table tr:nth-child(2) th {
   font-weight: 700;
@@ -355,6 +339,7 @@
   margin-top: var(--spacing-3xl);
   padding-top: var(--spacing-3xl);
   border-top: 2px solid var(--gray-light);
+  width: 100%;
 }
 
 .related-products h2 {
@@ -429,42 +414,77 @@
   line-height: 1.5;
 }
 
-/* Responsive */
+/* ── Responsive ─────────────────────────────────────── */
 @media (max-width: 968px) {
+
+  .product-detail-page {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .product-detail-section {
+    padding: var(--spacing-xl) 0;
+  }
+
   .product-detail-grid {
     grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
   }
 
   .product-gallery {
     position: static;
+    width: 100%;
   }
 
-  .related-grid {
-    grid-template-columns: 1fr;
+  .main-product-image {
+    height: 280px;
+  }
+
+  /* Thumbnail: wrap naturally, no scroll */
+  .thumbnail-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-bottom: 0;
+    overflow: visible;
+  }
+
+  .thumbnail {
+    flex: 0 0 68px;
+    height: 60px;
+  }
+
+  .product-details h1 {
+    font-size: 28px;
+  }
+
+  .product-intro {
+    font-size: 16px;
+  }
+
+  .specs-table th,
+  .specs-table td {
+    padding: 10px;
+    font-size: 13px;
   }
 
   .product-detail-actions {
     flex-direction: column;
   }
 
-  /* ADD THESE */
-  .thumbnail-grid {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    gap: 8px;
-    padding-bottom: 10px;
+  .btn-large {
+    padding: 14px 24px;
+    font-size: 16px;
+    text-align: center;
   }
 
-  .thumbnail {
-    flex: 0 0 70px;
-    height: 60px;
-    scroll-snap-align: start;
+  .related-grid {
+    grid-template-columns: 1fr;
   }
 
-  .main-product-image {
-    height: 300px;
+  .related-products {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-xl);
   }
 }
